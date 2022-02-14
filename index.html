@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Color Picker</title>
         <link rel="stylesheet" href="assets/style.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
     </head>
     <body>
         <header>
@@ -36,6 +36,7 @@
 
             <div class="copied">Copied to clipboard</div>
         </div>
+
         <footer>
             <p>Made with by Paolo Leandro</p>
         </footer>
@@ -48,6 +49,17 @@
                     $(this).css('background-color',rColor);
                     $(this).children('.color-hex').text(rColor);
                 });
+            }).trigger('click');
+
+            // copy to clipboard
+            $('.color').click(function(){
+                var input = $("<input>");
+                var color = $(this).children(".color-hex").text();
+                $('body').append(input);
+                input.val(color).select();
+                document.execCommand('copy');
+                input.remove();
+                $('.copied').fadeIn().delay(2000).fadeOut();
             });
         </script>
     </body>
