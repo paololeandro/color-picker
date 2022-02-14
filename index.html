@@ -39,5 +39,16 @@
         <footer>
             <p>Made with by Paolo Leandro</p>
         </footer>
+
+        <script>
+            // set random colors
+            $('.refresh').click(function(){
+                $('.color').each(function(){
+                    var rColor = '#' + Math.random().toString(16).substr(2,6);
+                    $(this).css('background-color',rColor);
+                    $(this).children('.color-hex').text(rColor);
+                });
+            });
+        </script>
     </body>
 </html>

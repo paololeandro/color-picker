@@ -52,23 +52,46 @@ p {
 .color {
     flex: 25%;
     min-height: 390px;
-    background-color: red;
     transition: .4s linear;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
 }
 
 .color:hover {
     filter: brightness(80%);
 }
 
+.color-hex {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #282a36;
+}
+
 .refresh {
     width: 100px;
+    height: 40px;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
     background-color: #50fa7b;
+}
+
+.refresh:hover {
+    filter: brightness(80%);
 }
 
 .refresh p {
     font-size: 15px;
     color: #282a36;
+}
+
+.copied {
+    padding: 10px;
+    color: #f8f8f2;
+    display: none;
 }
 
 footer {
