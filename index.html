@@ -13,9 +13,13 @@
             <p>Color Picker</p>
         </header>
         <div class="main">
+
+            <h1>Color Picker</h1>
+            <h2>Pick your own color pallete</h2>
+            
             <div class="box">
                 <div class="colors-container">
-                    <div class="color">
+                    <div class="color" style="border-radius: 10px 0px 0px 10px;">
                         <div class="color-hex">#000000</div>
                     </div>
                     <div class="color">
@@ -25,20 +29,24 @@
                         <div class="color-hex">#000000</div>
                     </div>
                     <div class="color">
+                        <div class="color-hex">#000000</div>
+                    </div>
+                    <div class="color">
+                        <div class="color-hex">#000000</div>
+                    </div>
+                    <div class="color" style="border-radius: 0px 10px 10px 0px;">
                         <div class="color-hex">#000000</div>
                     </div>
                 </div>
             </div>
 
-            <button class="refresh">
-                <p>Generate</p>
-            </button>
+            <button class="refresh">Generate</button>
 
             <div class="copied">Copied to clipboard</div>
         </div>
 
         <footer>
-            <p>Made with by Paolo Leandro</p>
+            <p>Made with <img class="heart" src="assets/img/heart.png"> by Paolo Leandro</p>
         </footer>
 
         <script>
@@ -59,7 +67,7 @@
                 input.val(color).select();
                 document.execCommand('copy');
                 input.remove();
-                $('.copied').fadeIn().delay(2000).fadeOut();
+                $('.copied').fadeIn().delay(1000).fadeOut();
             });
         </script>
     </body>
